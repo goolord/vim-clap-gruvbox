@@ -1,8 +1,6 @@
 "#########################################
 " Vim-Clap Theme
 "#########################################
-let s:save_cpo = &cpoptions
-set cpoptions&vim
 let s:palette = {}
 
 let grey_dark = '#1d2021'
@@ -29,22 +27,19 @@ let s:palette.current_selection = { 'ctermbg': '236', 'guibg': grey_light, 'cter
 let s:palette.selected_sign = { 'ctermfg': '196', 'guifg': '#f2241f' }
 let s:palette.current_selection_sign = s:palette.selected_sign
 
-let s:fuzzy = [
-  \ [118 , '#B8BB26'] ,
-  \ [82  , '#B5C12E'] ,
-  \ [46  , '#B3C736'] ,
-  \ [47  , '#B0CE3E'] ,
-  \ [48  , '#ADD446'] ,
-  \ [49  , '#ABDA4E'] ,
-  \ [50  , '#A8E055'] ,
-  \ [51  , '#A6E65D'] ,
-  \ [87  , '#A3EC65'] ,
-  \ [123 , '#A0F36D'] ,
-  \ [159 , '#9EF975'] ,
-  \ [195 , '#9BFF7D'] ,
+let g:clap_fuzzy_match_hl_groups = [
+  \ [118 , '#fabd2f'] ,
+  \ [118 , '#fabd2f'] ,
+  \ [118 , '#fabd2f'] ,
+  \ [118 , '#fabd2f'] ,
+  \ [118 , '#fabd2f'] ,
+  \ [118 , '#fabd2f'] ,
+  \ [118 , '#fabd2f'] ,
+  \ [118 , '#fabd2f'] ,
+  \ [118 , '#fabd2f'] ,
+  \ [118 , '#fabd2f'] ,
+  \ [118 , '#fabd2f'] ,
+  \ [118 , '#fabd2f'] ,
   \ ]
-let g:clap_fuzzy_match_hl_groups = s:fuzzy
 
 let g:clap#themes#gruvbox_dark#palette = s:palette
-let &cpoptions = s:save_cpo
-unlet s:save_cpo
