@@ -10,17 +10,17 @@ let grey_mid = '#282828'
 let grey_light = '#3c3836'
 
 " main bg
-let s:palette.display = { 'ctermbg': '235', 'guibg': grey_mid }
+let s:palette.display = { 'ctermbg': '235', 'guibg': grey_dark }
 " Let ClapInput, ClapSpinner and ClapSearchText use the same backgound.
 
 " cmd line
-let s:bg0 = { 'ctermbg': '60', 'guibg': grey_dark }
+let s:bg0 = { 'ctermbg': '238', 'guibg': grey_mid }
 let s:palette.input = extend({'guifg': '#ebdbb2'}, s:bg0)
 let s:palette.spinner = extend({ 'ctermfg': '11', 'guifg':'#fabd2f', 'cterm': 'bold', 'gui': 'bold'}, s:bg0)
 let s:palette.search_text = extend({ 'ctermfg': '195', 'guifg': '#ebdbb2', 'cterm': 'bold', 'gui': 'bold' }, s:bg0)
 
 " preview bg
-let s:palette.preview = { 'ctermbg': '238', 'guibg': grey_dark }
+let s:palette.preview = { 'ctermbg': '238', 'guibg': grey_mid }
 
 " 
 let s:palette.selected = { 'ctermfg': '81', 'guifg': '#5FD7d7', 'cterm': 'bold,underline', 'gui': 'bold,underline' }
@@ -44,7 +44,6 @@ let s:fuzzy = [
   \ [195 , '#9BFF7D'] ,
   \ ]
 let g:clap_fuzzy_match_hl_groups = s:fuzzy
-
 
 let g:clap#themes#gruvbox_dark#palette = s:palette
 let &cpoptions = s:save_cpo
